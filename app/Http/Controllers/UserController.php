@@ -50,11 +50,11 @@ class UserController extends Controller
       
         public function update(Request $request,$id)
         {
-            $users = User::find($id);
-            $input = $request->all();
-            $users->update($input);
-            return redirect('users')->with('flash_message', 'User Updated!');      
-            
+           $users = User::find($id);
+           $input = $request->all();
+           $users->update($input);
+           return redirect('users')->with('flash_message', 'User Updated!');     
+              
         }
       
         public function destroy($id)
